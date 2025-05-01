@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:hint="@string/title_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etAuthor"
+            android:hint="@string/author_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etSeller"
+            android:hint="@string/seller_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etCopies"
+            android:hint="@string/copies_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:hint="@string/price_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etBankInfo"
+            android:hint="@string/bank_info_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:text="@string/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp" />
+            
+    </LinearLayout>
+</ScrollView>
+

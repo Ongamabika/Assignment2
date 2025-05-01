@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TextbookSale App</string>
+    <string name="title_hint">Enter book title</string>
+    <string name="author_hint">Enter author name</string>
+    <string name="seller_hint">Enter seller name</string>
+    <string name="copies_hint">Enter number of copies</string>
+    <string name="price_hint">Enter price</string>
+    <string name="bank_info_hint">Enter bank info</string>
+    <string name="submit_button">Submit</string>
+
+</resources>
