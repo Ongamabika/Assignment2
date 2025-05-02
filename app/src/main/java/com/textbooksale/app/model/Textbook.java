@@ -1,38 +1,44 @@
 package com.textbooksale.app.model;
 
 public class Textbook {
+    private final String title;
+    private final double price;
+    private final int copies;
+    private final String seller;
+    private final String author;
+    private final String imageUrl;
 
-
-    private String title, author, seller;
-    private int copies;
-    private double price;
-
-
-    public Textbook(String title, double price, int copies, String seller, String author) {
+    // Primary constructor
+    public Textbook(String title, double price, int copies,
+                    String seller, String author, String imageUrl) {
         this.title = title;
         this.price = price;
         this.copies = copies;
         this.seller = seller;
         this.author = author;
+        this.imageUrl = imageUrl;
     }
 
-    public String getDetails(){
-        return title+" by " + author + ", sold by: "+ seller + ", Price: R"+ price;
-    }
-    public String getTitle() {
-        return title;
-    }
-
-    public String getSeller() {
-        return seller;
+    // Overloaded constructor (without image)
+    public Textbook(String title, double price, int copies,
+                    String seller, String author) {
+        this(title, price, copies, seller, author, "");
     }
 
-    public boolean equals(Object obj){
-        if(obj instanceof Textbook){
-            Textbook textbook = (Textbook) obj;
-            return  this.title.equalsIgnoreCase(textbook.title)&&
-                    this.seller.equalsIgnoreCase(textbook.seller);
-        }
-        return false;
+    // Getters
+    public String getTitle() { return title; }
+    public double getPrice() { return price; }
+    public int getCopies() { return copies; }
+    public String getSeller() { return seller; }
+    public String getAuthor() { return author; }
+    public String getImageUrl() { return imageUrl; }
+
+    public String getFormattedPrice() {
+        return String.format("R%.2f", price);
+    }
+
+    public String getDetails() {
+        return String.format("%s\nby %s\n%s • %d available",
+                title, author, getFormattedPrice(), copies);
     }
 }

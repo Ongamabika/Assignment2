@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listBookButton = findViewById(R.id.btnListbook);
+        listBookButton = findViewById(R.id.btnListBook);
         browseBookButton = findViewById(R.id.btnBrowseBooks);  // New button
 
         listBookButton.setOnClickListener(v -> {
